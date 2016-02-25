@@ -1,19 +1,11 @@
 class MessageController < ApplicationController
 
-	def show
-
-	end
-
-	def showall
-
+	def index
+		@messages = Message.all
 	end
 
 	def new
 
-	end
-
-	def index
-		@messages = Message.all
 	end
 
 	def create
