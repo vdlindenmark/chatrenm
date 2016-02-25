@@ -5,7 +5,7 @@ class MessageController < ApplicationController
 	end
 
 	def new
-
+		@message = Message.new
 	end
 
 	def create
@@ -14,5 +14,8 @@ class MessageController < ApplicationController
 		@message.save
 		redirect_to @message
 	end
-
+	private
+	  	def message_params
+	    	params.require(:message).permit(:name, :text)
+	  	end
 end
