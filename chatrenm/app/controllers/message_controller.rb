@@ -4,8 +4,16 @@ class MessageController < ApplicationController
 
 	end
 
+	def showall
+
+	end
+
 	def new
 
+	end
+
+	def index
+		@messages = Message.all
 	end
 
 	def create
