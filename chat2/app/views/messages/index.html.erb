@@ -13,15 +13,13 @@
 
 
 <h1>Messages#new</h1>
-<%= form_for :message, url: {action: "index"} do |f| %>
+<%= form_for :message do |f| %>
   <p>
     <%= f.label :name %><br>
     <%= f.text_field :name %>
   </p>
  
   <p>
-    <%= f.label :content %><br>
-    <%= f.text_area :content %>
   </p>
  
   <p>
