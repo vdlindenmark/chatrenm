@@ -4,4 +4,9 @@ class MessagesController < ApplicationController
 
   def index
   end
+
+  def create
+  render plain: params[:message].inspect
+  end
+
 end
