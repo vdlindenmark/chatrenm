@@ -6,7 +6,10 @@ class MessagesController < ApplicationController
   end
 
   def create
-  render plain: params[:message].inspect
+  	@message = Message.new(params.require(:message).permit(:name, :content))
+
+  	@message.save
+  	redirect_to @message
   end
 
 end
