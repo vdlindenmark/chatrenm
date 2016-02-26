@@ -1,2 +1,30 @@
+
+
+
 <h1>Messages#index</h1>
 <p>Find me in app/views/messages/index.html.erb</p>
+
+<% @message.each do |m| %>
+	<%= m.name %><br>
+	<%= m.content %><br><hr>
+<% end %>
+
+
+
+
+<h1>Messages#new</h1>
+<%= form_for :message, url: {action: "index"} do |f| %>
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </p>
+ 
+  <p>
+    <%= f.label :content %><br>
+    <%= f.text_area :content %>
+  </p>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
