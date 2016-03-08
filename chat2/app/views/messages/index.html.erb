@@ -1,4 +1,19 @@
-
+<h1>Messages#new</h1>
+<%= form_tag({controller: "messages", method: "create"}) do %>
+  <p>
+    <%= label_tag(:name) %>
+    <%= text_field(:messages, :name) %>
+  </p>
+ 
+  <p>
+    <%= label_tag(:content) %>
+    <%= text_field(:messages, :content) %>
+  </p>
+ 
+  <p>
+    <%= submit_tag("Search") %>
+  </p>
+<% end %>
 
 
 <h1>Messages#index</h1>
@@ -7,22 +22,4 @@
 <% @message.each do |m| %>
 	<%= m.name %><br>
 	<%= m.content %><br><hr>
-<% end %>
-
-
-
-
-<h1>Messages#new</h1>
-<%= form_for :message do |f| %>
-  <p>
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </p>
- 
-  <p>
-  </p>
- 
-  <p>
-    <%= f.submit %>
-  </p>
 <% end %>
