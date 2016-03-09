@@ -16,8 +16,7 @@
 <h1>Bericht versturen</h1>
 <%= form_tag({controller: "messages", method: "create"}) do %>
   <p>
-    <%= label_tag(:Naam) %>
-    <%= text_field(:messages, :name) %>
+    <%= hidden_field :messages, :name, :value => current_user.username  %>
   </p>
  
   <p>
